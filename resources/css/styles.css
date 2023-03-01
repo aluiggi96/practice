@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+    font-family: 'Oswald';
+}
+
+body {
+    font-family: Oswald;
+    background-color: black;
+    color: white;
+}
+
+.nav {
+    background-image: linear-gradient(to bottom, black 50%, transparent);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 4rem;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    padding: 0 1rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.logo {
+    position: relative;
+    width: 4rem;
+    height: auto;
+    top: .75rem;
+}
+
+.main-banner, 
+.secondary-banner, 
+.transportation {
+    height: 45rem;
+    width: 100%;
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main-banner {
+    background-image: url(../img/62006-3840x2160-new-york-background-photo-desktop-4k.jpg);
+}
+
+.darked-banner, 
+.darked-secondary, 
+.darked-transportation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.darked-banner {
+    background-image: radial-gradient(at top left, transparent, black 70%);
+}
+
+.description-banner {
+    position: absolute;
+    inset: 50% auto auto 75%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: fit-content;
+    text-align: center;
+}
+
+.description-banner h1 {
+    font-size: 2.5rem;
+    padding: 0.45rem;
+}
+
+.description-banner p {
+    font-size: 1.2rem;
+    padding: .5rem;
+}
+
+.secondary-banner {
+    height: 35rem;
+    background-image: url(../img/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg);
+}
+
+.darked-secondary {
+    background-image: linear-gradient(to bottom, black 5%, transparent, black 90%);
+}
+
+.description-secondary {
+    text-align: center;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    width:  100%;
+    height: fit-content;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.description-secondary h2 {
+    padding: .25rem;
+    font-size: 2rem;
+}
+
+.transportation {
+    background-image: url(../img/dariana-devalle-6PurBwB2CjM-unsplash.jpg);
+}
+
+.darked-transportation {
+    background-image: linear-gradient(to bottom, black 3%, transparent);
+}
+
+.description-transp {
+    width: 75%;
+    height: 80%;
+    display: grid;
+    gap: .5rem;
+    text-align: center;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    background-color: rgba(0, 0, 0, .25);
+    padding: .575rem;
+}
+
+.main-grid, 
+.bus, 
+.train, 
+.taxi {
+    position: relative;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-grid {    
+    background-image: url(../img/andra-c-taylor-jr-6HCKP76U2LA-unsplash.jpg);
+    grid-column: 1 / 4;
+    flex: 2;
+}
+
+.description-transp h1 {
+    position: absolute;
+    width: 100%;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, .75);
+    padding: 1.5rem;
+}
+
+.bus {
+    background-image: url(../img/bus.jpg);
+}
+
+.train {
+    background-image: url(../img/benny-rotlevy-pnmOm0dG1Ng-unsplash.jpg);
+}
+
+.taxi {
+    background-image: url(../img/mattia-cioni-mbQZ_VA7V_s-unsplash.jpg);
+}
+
+.overlay {
+    position: absolute;
+    inset: auto 0 0 0;
+    background-color: rgba( 0, 0, 0, .75);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.overlay h2{
+    font-size: 1.5rem;
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+}
+
+.train:hover .overlay,
+.taxi:hover .overlay,
+.bus:hover .overlay {
+    height: 100%;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer h2 {
+    margin-bottom: 1rem;
+}
+
+.copyrigth {
+    text-align: left;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        background-image: linear-gradient(to bottom, black 50%, transparent);
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        height: 4rem;
+    }
+
+    .description-banner {
+        position: absolute;
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        height: fit-content;
+        text-align: center;
+    }
+    .description-banner h1 {
+        font-size: 1.25rem;
+        padding: 0.225rem;
+    }
+
+    .description-banner p {
+        font-size: 1rem;
+        padding: .25rem;
+    }
+}
